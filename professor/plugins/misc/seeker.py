@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 import asyncio
 import time
 from datetime import datetime, timedelta
@@ -14,19 +6,19 @@ from datetime import datetime, timedelta
 from pyrogram.types import InlineKeyboardMarkup
 
 from strings import get_string
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.misc import db
-from YukkiMusic.plugins.admins.callback import wrong
-from YukkiMusic.plugins.misc.autoleave import autoend
-from YukkiMusic.utils.database import (
+from professor.core.call import Yukki
+from professor.misc import db
+from professor.plugins.admins.callback import wrong
+from professor.plugins.misc.autoleave import autoend
+from professor.utils.database import (
     get_active_chats,
     get_assistant,
     get_lang,
     is_music_playing,
     set_loop,
 )
-from YukkiMusic.utils.formatters import seconds_to_min
-from YukkiMusic.utils.inline import stream_markup_timer, telegram_markup_timer
+from professor.utils.formatters import seconds_to_min
+from professor.utils.inline import stream_markup_timer, telegram_markup_timer
 
 checker = {}
 muted = {}
