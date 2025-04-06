@@ -1,19 +1,11 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 from pyrogram.errors import ChannelInvalid
 from pyrogram.types import Message
 
 from strings import command
-from YukkiMusic import app
-from YukkiMusic.misc import SUDOERS, db
-from YukkiMusic.utils.database.memorydatabase import (
+from professor import app
+from professor.misc import SUDOERS, db
+from professor.utils.database.memorydatabase import (
     get_active_chats,
     get_active_video_chats,
     remove_active_chat,
