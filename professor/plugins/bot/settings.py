@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 from pyrogram import filters
 from pyrogram.enums import ChatType
 from pyrogram.errors import MessageNotModified
@@ -19,8 +11,8 @@ from pyrogram.types import (
 
 from config import BANNED_USERS, CLEANMODE_DELETE_MINS, OWNER_ID
 from strings import command
-from YukkiMusic import app
-from YukkiMusic.utils.database import (
+from professor import app
+from professor.utils.database import (
     add_nonadmin_chat,
     cleanmode_off,
     cleanmode_on,
@@ -41,9 +33,9 @@ from YukkiMusic.utils.database import (
     set_playmode,
     set_playtype,
 )
-from YukkiMusic.utils.decorators.admins import ActualAdminCB
-from YukkiMusic.utils.decorators.language import language, languageCB
-from YukkiMusic.utils.inline.settings import (
+from professor.utils.decorators.admins import ActualAdminCB
+from professor.utils.decorators.language import language, languageCB
+from professor.utils.inline.settings import (
     audio_quality_markup,
     auth_users_markup,
     cleanmode_settings_markup,
@@ -51,7 +43,7 @@ from YukkiMusic.utils.inline.settings import (
     setting_markup,
     video_quality_markup,
 )
-from YukkiMusic.utils.inline.start import private_panel
+from professor.utils.inline.start import private_panel
 
 
 @app.on_message(command("SETTINGS_COMMAND") & filters.group & ~BANNED_USERS)
