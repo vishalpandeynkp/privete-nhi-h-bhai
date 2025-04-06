@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 import asyncio
 import time
 
@@ -19,12 +11,12 @@ import config
 from config import BANNED_USERS, START_IMG_URL
 from config.config import OWNER_ID
 from strings import command, get_string
-from YukkiMusic import Platform, app
-from YukkiMusic.misc import SUDOERS, _boot_
-from YukkiMusic.plugins.bot.help import paginate_modules
-from YukkiMusic.plugins.play.playlist import del_plist_msg
-from YukkiMusic.plugins.sudo.sudoers import sudoers_list
-from YukkiMusic.utils.database import (
+from professor import Platform, app
+from professor.misc import SUDOERS, _boot_
+from professor.plugins.bot.help import paginate_modules
+from professor.plugins.play.playlist import del_plist_msg
+from professor.plugins.sudo.sudoers import sudoers_list
+from professor.utils.database import (
     add_served_chat,
     add_served_user,
     blacklisted_chats,
@@ -34,10 +26,10 @@ from YukkiMusic.utils.database import (
     is_on_off,
     is_served_private_chat,
 )
-from YukkiMusic.utils.decorators.language import LanguageStart
-from YukkiMusic.utils.formatters import get_readable_time
-from YukkiMusic.utils.functions import MARKDOWN, WELCOMEHELP
-from YukkiMusic.utils.inline import private_panel, start_pannel
+from professor.utils.decorators.language import LanguageStart
+from professor.utils.formatters import get_readable_time
+from professor.utils.functions import MARKDOWN, WELCOMEHELP
+from professor.utils.inline import private_panel, start_pannel
 
 loop = asyncio.get_running_loop()
 
