@@ -1,20 +1,11 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
 
 from pyrogram.types import Message
 
 from strings import command
-from YukkiMusic import app
-from YukkiMusic.misc import SUDOERS
-from YukkiMusic.utils.database import set_video_limit
-from YukkiMusic.utils.decorators.language import language
+from professor import app
+from professor.misc import SUDOERS
+from professor.utils.database import set_video_limit
+from professor.utils.decorators.language import language
 
 
 @app.on_message(command("VIDEOLIMIT_COMMAND") & SUDOERS)
