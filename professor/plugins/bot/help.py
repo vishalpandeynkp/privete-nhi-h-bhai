@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 import logging
 import re
@@ -17,10 +9,10 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 from config import BANNED_USERS, START_IMG_URL
 from strings import command, get_command, get_string, helpers
-from YukkiMusic import HELPABLE, app
-from YukkiMusic.utils.database import get_lang, is_commanddelete_on
-from YukkiMusic.utils.decorators.language import LanguageStart
-from YukkiMusic.utils.inline.help import private_help_panel
+from professor import HELPABLE, app
+from professor.utils.database import get_lang, is_commanddelete_on
+from professor.utils.decorators.language import LanguageStart
+from professor.utils.inline.help import private_help_panel
 
 COLUMN_SIZE = 4  # Number of button height
 NUM_COLUMNS = 3  # Number of button width
