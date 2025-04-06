@@ -1,22 +1,14 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 from pyrogram.errors import ChannelPrivate
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from config import PLAYLIST_IMG_URL, PRIVATE_BOT_MODE, adminlist
 from strings import get_string
-from YukkiMusic import Platform, app
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.misc import SUDOERS
-from YukkiMusic.utils.database import (
+from professor import Platform, app
+from professor.core.call import Yukki
+from professor.misc import SUDOERS
+from professor.utils.database import (
     get_assistant,
     get_cmode,
     get_lang,
@@ -27,7 +19,7 @@ from YukkiMusic.utils.database import (
     is_maintenance,
     is_served_private_chat,
 )
-from YukkiMusic.utils.inline import botplaylist_markup
+from professor.utils.inline import botplaylist_markup
 
 links = {}
 
