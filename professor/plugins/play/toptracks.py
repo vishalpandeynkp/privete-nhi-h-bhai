@@ -1,31 +1,23 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 import asyncio
 
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup
 
 from config import BANNED_USERS
-from YukkiMusic import app
-from YukkiMusic.utils.database import (
+from professor import app
+from professor.utils.database import (
     get_global_tops,
     get_particulars,
     get_userss,
 )
-from YukkiMusic.utils.decorators import languageCB
-from YukkiMusic.utils.inline.playlist import (
+from professor.utils.decorators import languageCB
+from professor.utils.inline.playlist import (
     botplaylist_markup,
     failed_top_markup,
     top_play_markup,
 )
-from YukkiMusic.utils.stream.stream import stream
+from professor.utils.stream.stream import stream
 
 loop = asyncio.get_running_loop()
 
