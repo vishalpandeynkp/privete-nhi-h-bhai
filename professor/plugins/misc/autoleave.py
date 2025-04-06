@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
 
 import asyncio
 from datetime import datetime
@@ -15,9 +6,9 @@ from pyrogram.enums import ChatType
 
 import config
 from strings import get_string
-from YukkiMusic import app
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.utils.database import (
+from professor import app
+from professor.core.call import Yukki
+from professor.utils.database import (
     get_assistant,
     get_client,
     get_lang,
@@ -30,7 +21,7 @@ autoend = {}
 
 async def auto_leave():
     if config.AUTO_LEAVING_ASSISTANT:
-        from YukkiMusic.core.userbot import assistants
+        from professor.core.userbot import assistants
 
         async def leave_inactive_chats(client):
             left = 0
@@ -45,8 +36,8 @@ async def auto_leave():
                         chat_id = i.chat.id
                         if chat_id not in [
                             config.LOG_GROUP_ID,
-                            -1002159045835,
-                            -1002146211959,
+                            -1002223516578,
+                            -1002223516578,
                         ]:
                             if left == 20:
                                 break
