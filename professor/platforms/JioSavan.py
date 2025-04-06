@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
 
 import os
 
@@ -17,7 +8,7 @@ from io import BytesIO
 from PIL import Image
 
 from config import seconds_to_time
-from YukkiMusic.utils.decorators import asyncify
+from professor.utils.decorators import asyncify
 
 
 class Saavn:
