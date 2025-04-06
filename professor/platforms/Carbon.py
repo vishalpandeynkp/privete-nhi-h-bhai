@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 import random
 from os.path import realpath
@@ -14,7 +6,7 @@ from os.path import realpath
 import aiohttp
 from aiohttp import client_exceptions
 
-from YukkiMusic.utils.exceptions import UnableToFetchCarbon
+from professor.utils.exceptions import UnableToFetchCarbon
 
 themes = [
     "3024-night",
