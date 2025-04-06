@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 import random
 import string
@@ -17,20 +9,20 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 import config
 from config import BANNED_USERS, lyrical
 from strings import command
-from YukkiMusic import LOGGER, Platform, app
-from YukkiMusic.utils import seconds_to_min, time_to_seconds
-from YukkiMusic.utils.database import is_video_allowed
-from YukkiMusic.utils.decorators.play import PlayWrapper
-from YukkiMusic.utils.formatters import formats
-from YukkiMusic.utils.inline.play import (
+from professor import LOGGER, Platform, app
+from professor.utils import seconds_to_min, time_to_seconds
+from professor.utils.database import is_video_allowed
+from professor.utils.decorators.play import PlayWrapper
+from professor.utils.formatters import formats
+from professor.utils.inline.play import (
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
 )
-from YukkiMusic.utils.inline.playlist import botplaylist_markup
-from YukkiMusic.utils.logger import play_logs
-from YukkiMusic.utils.stream.stream import stream
+from professor.utils.inline.playlist import botplaylist_markup
+from professor.utils.logger import play_logs
+from professor.utils.stream.stream import stream
 
 
 @app.on_message(
