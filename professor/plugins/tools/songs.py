@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 import os
 import re
@@ -28,11 +20,11 @@ from config import (
     SONG_DOWNLOAD_DURATION_LIMIT,
 )
 from strings import command
-from YukkiMusic import Platform, app
-from YukkiMusic.platforms.Youtube import cookies
-from YukkiMusic.utils.decorators.language import language, languageCB
-from YukkiMusic.utils.formatters import convert_bytes
-from YukkiMusic.utils.inline.song import song_markup
+from professor import Platform, app
+from professor.platforms.Youtube import cookies
+from professor.utils.decorators.language import language, languageCB
+from professor.utils.formatters import convert_bytes
+from professor.utils.inline.song import song_markup
 
 
 @app.on_message(command("SONG_COMMAND") & filters.group & ~BANNED_USERS)
