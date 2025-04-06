@@ -1,5 +1,5 @@
 # Radhe Radhe
-from YukkiMusic.platforms.JioSavan import Saavn
+from professor.platforms.JioSavan import Saavn
 
 
 async def download(title, video):
