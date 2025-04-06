@@ -1,27 +1,18 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
 
 from pyrogram import filters
 from pyrogram.types import Message
 
 from config import BANNED_USERS, adminlist
 from strings import command
-from YukkiMusic import app
-from YukkiMusic.utils.database import (
+from professor import app
+from professor.utils.database import (
     delete_authuser,
     get_authuser,
     get_authuser_names,
     save_authuser,
 )
-from YukkiMusic.utils.decorators import AdminActual, language
-from YukkiMusic.utils.formatters import int_to_alpha
+from professor.utils.decorators import AdminActual, language
+from professor.utils.formatters import int_to_alpha
 
 
 @app.on_message(command("AUTH_COMMAND") & filters.group & ~BANNED_USERS)
