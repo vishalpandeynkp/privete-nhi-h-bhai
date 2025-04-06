@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 import asyncio
 import platform
 from sys import version as pyver
@@ -21,10 +13,10 @@ from pytgcalls.__version__ import __version__ as pytgver
 import config
 from config import BANNED_USERS
 from strings import command
-from YukkiMusic import Platform, app
-from YukkiMusic.core.userbot import assistants
-from YukkiMusic.misc import SUDOERS, pymongodb
-from YukkiMusic.utils.database import (
+from professor import Platform, app
+from professor.core.userbot import assistants
+from professor.misc import SUDOERS, pymongodb
+from professor.utils.database import (
     get_global_tops,
     get_particulars,
     get_queries,
@@ -34,8 +26,8 @@ from YukkiMusic.utils.database import (
     get_top_chats,
     get_topp_users,
 )
-from YukkiMusic.utils.decorators.language import language, languageCB
-from YukkiMusic.utils.inline.stats import (
+from professor.utils.decorators.language import language, languageCB
+from professor.utils.inline.stats import (
     back_stats_buttons,
     back_stats_markup,
     get_stats_markup,
