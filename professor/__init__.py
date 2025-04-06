@@ -1,25 +1,18 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
+
 
 import config
-from YukkiMusic.core.bot import YukkiBot
-from YukkiMusic.core.dir import dirr
-from YukkiMusic.core.git import git
-from YukkiMusic.core.userbot import Userbot
-from YukkiMusic.misc import dbb, heroku, sudo
+from professor.core.bot import YukkiBot
+from professor.core.dir import dirr
+from professor.core.git import git
+from professor.core.userbot import Userbot
+from professor.misc import dbb, heroku, sudo
 
 from .logging import LOGGER
 
 # Pyrogram Client
 
 app = YukkiBot(
-    "YukkiMusic",
+    "professor",
     api_id=config.API_ID,
     api_hash=config.API_HASH,
     bot_token=config.BOT_TOKEN,
