@@ -1,26 +1,18 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 from pyrogram.types import Message
 
 import config
 from strings import command
-from YukkiMusic import app
-from YukkiMusic.misc import SUDOERS
-from YukkiMusic.utils.database import (
+from professor import app
+from professor.misc import SUDOERS
+from professor.utils.database import (
     add_private_chat,
     get_private_served_chats,
     is_served_private_chat,
     remove_private_chat,
 )
-from YukkiMusic.utils.decorators.language import language
+from professor.utils.decorators.language import language
 
 
 @app.on_message(command("AUTHORIZE_COMMAND") & SUDOERS)
