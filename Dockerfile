@@ -14,4 +14,4 @@ RUN python3 -m pip install --upgrade pip setuptools wheel && \
 
 COPY . .
 
-CMD ["python3", "-m", "YukkiMusic"]
+CMD ["python3", "-m", "professor"]
