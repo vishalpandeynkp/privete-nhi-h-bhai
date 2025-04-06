@@ -1,21 +1,13 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 from pyrogram import filters
 from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import command
-from YukkiMusic import app
-from YukkiMusic.utils.database.memorydatabase import get_loop, set_loop
-from YukkiMusic.utils.decorators import AdminRightsCheck
+from professor import app
+from professor.utils.database.memorydatabase import get_loop, set_loop
+from professor.utils.decorators import AdminRightsCheck
 
 
 @app.on_message(command("LOOP_COMMAND") & filters.group & ~BANNED_USERS)
