@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 import asyncio
 import os
 import random
@@ -19,9 +11,9 @@ from pyrogram.types import Message
 from yt_dlp import YoutubeDL
 
 import config
-from YukkiMusic.utils.database import is_on_off
-from YukkiMusic.utils.decorators import asyncify
-from YukkiMusic.utils.formatters import seconds_to_min, time_to_seconds
+from professor.utils.database import is_on_off
+from professor.utils.decorators import asyncify
+from professor.utils.formatters import seconds_to_min, time_to_seconds
 
 NOTHING = {"cookies_dead": None}
 
