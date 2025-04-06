@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 import asyncio
 
 from ntgcalls import TelegramServerError
@@ -31,11 +23,11 @@ from pytgcalls.types import (
 
 import config
 from strings import get_string
-from YukkiMusic import LOGGER, Platform, app, userbot
-from YukkiMusic.core.userbot import assistants
-from YukkiMusic.misc import db
-from YukkiMusic.utils import fallback
-from YukkiMusic.utils.database import (
+from professor import LOGGER, Platform, app, userbot
+from professor.core.userbot import assistants
+from professor.misc import db
+from professor.utils import fallback
+from professor.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_assistant,
@@ -50,10 +42,10 @@ from YukkiMusic.utils.database import (
     set_assistant,
     set_loop,
 )
-from YukkiMusic.utils.exceptions import AssistantErr
-from YukkiMusic.utils.inline.play import stream_markup, telegram_markup
-from YukkiMusic.utils.stream.autoclear import auto_clean
-from YukkiMusic.utils.thumbnails import gen_thumb
+from professor.utils.exceptions import AssistantErr
+from professor.utils.inline.play import stream_markup, telegram_markup
+from professor.utils.stream.autoclear import auto_clean
+from professor.utils.thumbnails import gen_thumb
 
 links = {}
 
