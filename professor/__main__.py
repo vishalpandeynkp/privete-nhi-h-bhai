@@ -1,11 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
+
 import asyncio
 import os
 
@@ -14,11 +7,11 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from config import BANNED_USERS
-from YukkiMusic import HELPABLE, LOGGER, app, userbot
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.utils.database import get_banned_users, get_gbanned
+from professor import HELPABLE, LOGGER, app, userbot
+from professor.core.call import Yukki
+from professor.utils.database import get_banned_users, get_gbanned
 
-logger = LOGGER("YukkiMusic")
+logger = LOGGER("professor")
 loop = asyncio.get_event_loop()
 
 
@@ -40,7 +33,7 @@ async def init():
     except Exception:
         pass
     await app.start()
-    for mod in app.load_plugins_from("YukkiMusic/plugins"):
+    for mod in app.load_plugins_from("professor/plugins"):
         if mod and hasattr(mod, "__MODULE__") and mod.__MODULE__:
             if hasattr(mod, "__HELP__") and mod.__HELP__:
                 HELPABLE[mod.__MODULE__.lower()] = mod
@@ -72,22 +65,22 @@ async def init():
                 if hasattr(mod, "__HELP__") and mod.__HELP__:
                     HELPABLE[mod.__MODULE__.lower()] = mod
 
-    LOGGER("YukkiMusic.plugins").info("Successfully Imported All Modules ")
+    LOGGER("professor.plugins").info("Successfully Imported All Modules ")
     await userbot.start()
     await Yukki.start()
-    LOGGER("YukkiMusic").info("Assistant Started Sucessfully")
+    LOGGER("professor").info("Assistant Started Sucessfully")
     try:
         await Yukki.stream_call(
             "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp4"
         )
     except NoActiveGroupCall:
-        LOGGER("YukkiMusic").error(
+        LOGGER("professor").error(
             "Please ensure the voice call in your log group is active."
         )
         exit()
 
     await Yukki.decorators()
-    LOGGER("YukkiMusic").info("YukkiMusic Started Successfully")
+    LOGGER("professor").info("professor Started Successfully")
     await idle()
     await app.stop()
     await userbot.stop()
@@ -95,4 +88,4 @@ async def init():
 
 if __name__ == "__main__":
     loop.run_until_complete(init())
-    LOGGER("YukkiMusic").info("Stopping YukkiMusic! GoodBye")
+    LOGGER("professor").info("Stopping professor! GoodBye")
