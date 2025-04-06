@@ -8,9 +8,9 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 import config
 from config import BANNED_USERS
 from strings import command
-from YukkiMusic import app
-from YukkiMusic.misc import SUDOERS
-from YukkiMusic.utils.database import (
+from professor import app
+from professor.misc import SUDOERS
+from professor.utils.database import (
     authuserdb,
     delete_playlist,
     delete_served_user,
@@ -24,7 +24,7 @@ from YukkiMusic.utils.database import (
 TEXT = f"""
 🔒 **Privacy Policy for {app.mention} !**
 
-Your privacy is important to us. To learn more about how we collect, use, and protect your data, please review our Privacy Policy here: [Privacy Policy](https://github.com/TheTeamVivek/YukkiMusic/blob/master/PRIVACY.md).
+Your privacy is important to us. To learn more about how we collect, use, and protect your data, please review our Privacy Policy here: [Privacy Policy](https://github.com/TheTeamVivek/professor/blob/master/PRIVACY.md).
 
 If you have any questions or concerns, feel free to reach out to our [Support Team]({config.SUPPORT_GROUP}).
 """
@@ -243,7 +243,7 @@ async def export_user_data(_, cq):
         await cq.message.reply_document(
             document=file_path,
             caption=(
-                "🔒 Here is your user data export from YukkiMusic.\n\n"
+                "🔒 Here is your user data export from professor.\n\n"
                 "⚠️ This file contains your personal information. "
                 "Please handle it carefully and do not share it with others.\n\n"
                 "📊 Includes:\n"
