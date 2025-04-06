@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 import asyncio
 import math
 import os
@@ -27,18 +19,18 @@ from pyrogram.types import Message
 import config
 from config import BANNED_USERS
 from strings import command
-from YukkiMusic import app
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.misc import HAPP, SUDOERS, XCB, db
-from YukkiMusic.utils.database import (
+from professor import app
+from professor.core.call import Yukki
+from professor.misc import HAPP, SUDOERS, XCB, db
+from professor.utils.database import (
     get_active_chats,
     get_cmode,
     remove_active_chat,
     remove_active_video_chat,
 )
-from YukkiMusic.utils.decorators import AdminActual, language
-from YukkiMusic.utils.decorators.language import language
-from YukkiMusic.utils.pastebin import Yukkibin
+from professor.utils.decorators import AdminActual, language
+from professor.utils.decorators.language import language
+from professor.utils.pastebin import Yukkibin
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -140,7 +132,7 @@ async def vardel_(client, message, _):
             return await message.reply_text(_["heroku_4"])
         else:
             await message.reply_text(_["heroku_7"].format(check_var))
-            os.system(f"kill -9 {os.getpid()} && python3 -m YukkiMusic")
+            os.system(f"kill -9 {os.getpid()} && python3 -m professor")
 
 
 @app.on_message(command("SETVAR_COMMAND") & SUDOERS)
@@ -169,7 +161,7 @@ async def set_var(client, message, _):
             await message.reply_text(_["heroku_9"].format(to_set))
         else:
             await message.reply_text(_["heroku_10"].format(to_set))
-        os.system(f"kill -9 {os.getpid()} && python3 -m YukkiMusic")
+        os.system(f"kill -9 {os.getpid()} && python3 -m professor")
 
 
 @app.on_message(command("USAGE_COMMAND") & SUDOERS)
@@ -312,7 +304,7 @@ async def update_(client, message, _):
             )
     else:
         os.system("pip3 install --no-cache-dir -U -r requirements.txt")
-        os.system(f"kill -9 {os.getpid()} && python3 -m YukkiMusic")
+        os.system(f"kill -9 {os.getpid()} && python3 -m professor")
         exit()
 
 
@@ -370,4 +362,4 @@ async def restart_(client, message):
     await response.edit_text(
         "Restart process started, please wait for few seconds until the bot starts..."
     )
-    os.system(f"kill -9 {os.getpid()} && python3 -m YukkiMusic")
+    os.system(f"kill -9 {os.getpid()} && python3 -m professor")
