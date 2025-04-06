@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 from py_yt import VideosSearch
 from pyrogram.types import (
@@ -16,8 +8,8 @@ from pyrogram.types import (
 )
 
 from config import BANNED_USERS
-from YukkiMusic import app
-from YukkiMusic.utils.inlinequery import answer
+from professor import app
+from professor.utils.inlinequery import answer
 
 
 @app.on_inline_query(~BANNED_USERS)
