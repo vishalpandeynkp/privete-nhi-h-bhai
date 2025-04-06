@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 import asyncio
 
@@ -15,10 +7,10 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import command
-from YukkiMusic import app
-from YukkiMusic.misc import SUDOERS
-from YukkiMusic.utils import get_readable_time
-from YukkiMusic.utils.database import (
+from professor import app
+from professor.misc import SUDOERS
+from professor.utils import get_readable_time
+from professor.utils.database import (
     add_banned_user,
     get_banned_count,
     get_banned_users,
@@ -26,7 +18,7 @@ from YukkiMusic.utils.database import (
     is_banned_user,
     remove_banned_user,
 )
-from YukkiMusic.utils.decorators.language import language
+from professor.utils.decorators.language import language
 
 
 @app.on_message(command("GBAN_COMMAND") & SUDOERS)
