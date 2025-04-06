@@ -10,8 +10,8 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait
 
 from config import BANNED_USERS, MONGO_DB_URI, OWNER_ID
-from YukkiMusic import app
-from YukkiMusic.core.mongo import DB_NAME
+from professor import app
+from professor.core.mongo import DB_NAME
 
 
 class CustomJSONEncoder(json.JSONEncoder):
