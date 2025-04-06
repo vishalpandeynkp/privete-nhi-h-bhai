@@ -1,11 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
+
 
 import logging
 from functools import wraps
@@ -14,8 +7,8 @@ from traceback import format_exc as err
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 from pyrogram.types import Message
 
-from YukkiMusic import app
-from YukkiMusic.misc import SUDOERS
+from professor import app
+from professor.misc import SUDOERS
 
 
 async def member_permissions(chat_id: int, user_id: int):
