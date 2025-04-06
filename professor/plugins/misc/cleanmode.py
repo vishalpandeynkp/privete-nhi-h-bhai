@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 import asyncio
 from datetime import datetime, timedelta
@@ -19,8 +11,8 @@ from pyrogram.raw import types
 import config
 from config import adminlist, chatstats, clean, userstats
 from strings import command
-from YukkiMusic import app
-from YukkiMusic.utils.database import (
+from professor import app
+from professor.utils.database import (
     get_active_chats,
     get_authuser_names,
     get_client,
@@ -33,8 +25,8 @@ from YukkiMusic.utils.database import (
     update_particular_top,
     update_user_top,
 )
-from YukkiMusic.utils.decorators.language import language
-from YukkiMusic.utils.formatters import alpha_to_int
+from professor.utils.decorators.language import language
+from professor.utils.formatters import alpha_to_int
 
 AUTO_DELETE = config.CLEANMODE_DELETE_MINS
 AUTO_SLEEP = 5
@@ -184,7 +176,7 @@ async def braodcast_message(client, message, _):
     if "-assistant" in message.text:
         aw = await message.reply_text(_["broad_2"])
         text = _["broad_3"]
-        from YukkiMusic.core.userbot import assistants
+        from professor.core.userbot import assistants
 
         for num in assistants:
             sent = 0
