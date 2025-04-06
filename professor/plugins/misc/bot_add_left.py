@@ -1,19 +1,11 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 from config import LOG, LOG_GROUP_ID
-from YukkiMusic import app
-from YukkiMusic.utils.database import (
+from professor import app
+from professor.utils.database import (
     delete_served_chat,
     get_assistant,
     is_on_off,
