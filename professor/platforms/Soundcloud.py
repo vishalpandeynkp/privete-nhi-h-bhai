@@ -1,19 +1,11 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 from os import path
 
 from yt_dlp import YoutubeDL
 
-from YukkiMusic.utils.decorators import asyncify
-from YukkiMusic.utils.formatters import seconds_to_min
+from professor.utils.decorators import asyncify
+from professor.utils.formatters import seconds_to_min
 
 
 class SoundCloud:
