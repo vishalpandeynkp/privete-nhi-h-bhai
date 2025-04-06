@@ -1,17 +1,9 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 
 from config import autoclean, chatstats, userstats
 from config.config import time_to_seconds
-from YukkiMusic.misc import db
+from professor.misc import db
 
 
 async def put_queue(
