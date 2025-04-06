@@ -1,12 +1,12 @@
 {
-    "name": "YukkiMusic",
+    "name": "professor",
     "description": "Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls. Supporting platforms like Youtube, Spotify, Resso, AppleMusic, Soundcloud and M3u8 Links.",
     "logo": "https://graph.org/file/c0e014ff34f34d1056627.png",
     "keywords": [
     "python3",
     "telegram",
     "bot",
-    "Yukki",
+    "nobitamusic",
     "YukkiMusicBot",
     "telegram-bot",
     "pyrogram"
@@ -16,12 +16,12 @@
     "env": {
       "API_ID": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "",
+        "value": "14050586",
         "required": true
       },
       "API_HASH": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "",
+        "value": "42a60d9c657b106370c79bb0a8ac560c",
         "required": true
       },
       "BOT_TOKEN": {
@@ -36,12 +36,12 @@
       },
       "MONGO_DB_URI": {
         "description": "Get a mongodb url from https://cloud.mongodb.com . You can leave it blank if you want , bot will use Yukki's database for you.",
-        "value": "",
+        "value": "mongodb+srv://vishalpandeynkp:Bal6Y6FZeQeoAoqV@cluster0.dzgwt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
         "required": false
       },
       "OWNER_ID": {
         "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
-        "value": "",
+        "value": "6972508083",
         "required": true
       },
       "STRING_SESSIONS": {
@@ -61,12 +61,12 @@
       },
       "LOG_GROUP_ID": {
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Use only Group. Please don't use Channel ID.",
-        "value": "",
+        "value": "-1002223516578",
         "required": true
       },
       "UPSTREAM_REPO": {
         "description": "If you dont know this, Leave as it is",
-        "value": "https://github.com/TheTeamVivek/YukkiMusic",
+        "value": "https://github.com/vishalpandeynkp/privete-nhi-h-bhai",
         "required": true
       },
       "UPSTREAM_BRANCH": {
