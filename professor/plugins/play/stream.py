@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 from pyrogram import filters
 from pyrogram.types import Message
@@ -15,11 +7,11 @@ from pytgcalls.exceptions import NoActiveGroupCall
 import config
 from config import BANNED_USERS
 from strings import command
-from YukkiMusic import app
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.utils.decorators.play import PlayWrapper
-from YukkiMusic.utils.logger import play_logs
-from YukkiMusic.utils.stream.stream import stream
+from professor import app
+from professor.core.call import Yukki
+from professor.utils.decorators.play import PlayWrapper
+from professor.utils.logger import play_logs
+from professor.utils.stream.stream import stream
 
 
 @app.on_message(command("STREAM_COMMAND") & filters.group & ~BANNED_USERS)
