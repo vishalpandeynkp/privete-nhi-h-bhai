@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 
 from pyrogram import filters
@@ -15,10 +7,10 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS, adminlist
 from strings import command
-from YukkiMusic import app
-from YukkiMusic.utils.database import get_authuser_names
-from YukkiMusic.utils.decorators import language
-from YukkiMusic.utils.formatters import alpha_to_int
+from professor import app
+from professor.utils.database import get_authuser_names
+from professor.utils.decorators import language
+from professor.utils.formatters import alpha_to_int
 
 
 @app.on_message(command("RELOAD_COMMAND") & filters.group & ~BANNED_USERS)
