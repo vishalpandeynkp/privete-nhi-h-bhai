@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
 
 import random
 
@@ -15,9 +6,9 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import command
-from YukkiMusic import app
-from YukkiMusic.misc import db
-from YukkiMusic.utils.decorators import AdminRightsCheck
+from professor import app
+from professor.misc import db
+from professor.utils.decorators import AdminRightsCheck
 
 
 @app.on_message(command("SHUFFLE_COMMAND") & filters.group & ~BANNED_USERS)
