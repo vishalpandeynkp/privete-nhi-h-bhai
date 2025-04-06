@@ -1,23 +1,15 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 from datetime import datetime
 
 from pyrogram.types import Message
 
 from config import BANNED_USERS, PING_IMG_URL
 from strings import command
-from YukkiMusic import app
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.utils import bot_sys_stats
-from YukkiMusic.utils.decorators.language import language
-from YukkiMusic.utils.inline import support_group_markup
+from professor import app
+from professor.core.call import Yukki
+from professor.utils import bot_sys_stats
+from professor.utils.decorators.language import language
+from professor.utils.inline import support_group_markup
 
 
 @app.on_message(command("PING_COMMAND") & ~BANNED_USERS)
