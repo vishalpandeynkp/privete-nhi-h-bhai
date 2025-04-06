@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 import os
 from random import randint
 
@@ -16,21 +8,21 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 from config import BANNED_USERS, SERVER_PLAYLIST_LIMIT
 from strings import command
-from YukkiMusic import Platform, app
-from YukkiMusic.utils.database import (
+from professor import Platform, app
+from professor.utils.database import (
     delete_playlist,
     get_playlist,
     get_playlist_names,
     save_playlist,
 )
-from YukkiMusic.utils.decorators import language, languageCB
-from YukkiMusic.utils.decorators.play import botplaylist_markup
-from YukkiMusic.utils.inline.playlist import (
+from professor.utils.decorators import language, languageCB
+from professor.utils.decorators.play import botplaylist_markup
+from professor.utils.inline.playlist import (
     get_playlist_markup,
     warning_markup,
 )
-from YukkiMusic.utils.pastebin import Yukkibin
-from YukkiMusic.utils.stream.stream import stream
+from professor.utils.pastebin import Yukkibin
+from professor.utils.stream.stream import stream
 
 
 @app.on_message(command("PLAYLIST_COMMAND") & ~BANNED_USERS)
