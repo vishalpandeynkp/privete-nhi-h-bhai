@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 
 from pyrogram import filters
@@ -15,15 +7,15 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 import config
 from config import BANNED_USERS
 from strings import command
-from YukkiMusic import Platform, app
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.misc import db
-from YukkiMusic.utils import fallback
-from YukkiMusic.utils.database import get_loop
-from YukkiMusic.utils.decorators import AdminRightsCheck
-from YukkiMusic.utils.inline.play import stream_markup, telegram_markup
-from YukkiMusic.utils.stream.autoclear import auto_clean
-from YukkiMusic.utils.thumbnails import gen_thumb
+from professor import Platform, app
+from professor.core.call import Yukki
+from professor.misc import db
+from professor.utils import fallback
+from professor.utils.database import get_loop
+from professor.utils.decorators import AdminRightsCheck
+from professor.utils.inline.play import stream_markup, telegram_markup
+from professor.utils.stream.autoclear import auto_clean
+from professor.utils.thumbnails import gen_thumb
 
 
 @app.on_message(command("SKIP_COMMAND") & filters.group & ~BANNED_USERS)
