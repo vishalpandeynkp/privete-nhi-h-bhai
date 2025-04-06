@@ -1,16 +1,3 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
-
-# This aeval and sh module is taken from < https://github.com/TheHamkerCat/WilliamButcherBot >
-# Credit goes to TheHamkerCat.
-#
 
 import asyncio
 import contextlib
@@ -22,8 +9,8 @@ from time import time
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from YukkiMusic import app
-from YukkiMusic.misc import SUDOERS
+from professor import app
+from professor.misc import SUDOERS
 
 
 async def aexec(code, client, message):
