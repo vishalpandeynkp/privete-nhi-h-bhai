@@ -1,20 +1,12 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 from pyrogram import filters
 
 from config import BANNED_USERS
-from YukkiMusic import Platform, app
-from YukkiMusic.utils.channelplay import get_channeplayCB
-from YukkiMusic.utils.decorators.language import languageCB
-from YukkiMusic.utils.stream.stream import stream
+from professor import Platform, app
+from professor.utils.channelplay import get_channeplayCB
+from professor.utils.decorators.language import languageCB
+from professor.utils.stream.stream import stream
 
 
 @app.on_callback_query(filters.regex("LiveStream") & ~BANNED_USERS)
