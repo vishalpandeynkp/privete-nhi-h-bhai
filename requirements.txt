@@ -6,7 +6,8 @@ dnspython
 ffmpeg-python
 gitpython
 heroku3
-httpx[http2]
+#httpx[http2]
+httpx==0.27.2
 kurigram==2.1.38
 lyricsgenius
 motor
@@ -28,4 +29,5 @@ flask
 gunicorn
 yt-dlp~=2025.3.27
 py-yt-search
-youtubesearchpython
+youtube-search
+youtube-search-python
