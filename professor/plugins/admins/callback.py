@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 import random
 
 from pyrogram import filters
@@ -23,12 +15,12 @@ from config import (
     adminlist,
     lyrical,
 )
-from YukkiMusic import Platform, app
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.misc import SUDOERS, db
-from YukkiMusic.utils import fallback, seconds_to_min, time_to_seconds
-from YukkiMusic.utils.channelplay import get_channeplayCB
-from YukkiMusic.utils.database import (
+from professor import Platform, app
+from professor.core.call import Yukki
+from professor.misc import SUDOERS, db
+from professor.utils import fallback, seconds_to_min, time_to_seconds
+from professor.utils.channelplay import get_channeplayCB
+from professor.utils.database import (
     is_active_chat,
     is_music_playing,
     is_muted,
@@ -39,10 +31,10 @@ from YukkiMusic.utils.database import (
     mute_on,
     set_loop,
 )
-from YukkiMusic.utils.decorators import ActualAdminCB
-from YukkiMusic.utils.decorators.language import languageCB
-from YukkiMusic.utils.formatters import seconds_to_min
-from YukkiMusic.utils.inline.play import (
+from professor.utils.decorators import ActualAdminCB
+from professor.utils.decorators.language import languageCB
+from professor.utils.formatters import seconds_to_min
+from professor.utils.inline.play import (
     livestream_markup,
     panel_markup_1,
     panel_markup_2,
@@ -51,9 +43,9 @@ from YukkiMusic.utils.inline.play import (
     stream_markup,
     telegram_markup,
 )
-from YukkiMusic.utils.stream.autoclear import auto_clean
-from YukkiMusic.utils.stream.stream import stream
-from YukkiMusic.utils.thumbnails import gen_thumb
+from professor.utils.stream.autoclear import auto_clean
+from professor.utils.stream.stream import stream
+from professor.utils.thumbnails import gen_thumb
 
 wrong = {}
 
