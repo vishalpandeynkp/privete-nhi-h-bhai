@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus, ChatType
@@ -15,9 +7,9 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import command, get_command
-from YukkiMusic import app
-from YukkiMusic.utils.database import get_lang, set_cmode
-from YukkiMusic.utils.decorators.admins import AdminActual
+from professor import app
+from professor.utils.database import get_lang, set_cmode
+from professor.utils.decorators.admins import AdminActual
 
 
 @app.on_message(command("CHANNELPLAY_COMMAND") & filters.group & ~BANNED_USERS)
