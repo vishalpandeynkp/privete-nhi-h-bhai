@@ -28,3 +28,4 @@ flask
 gunicorn
 yt-dlp~=2025.3.27
 py-yt-search
+youtubesearchpython
