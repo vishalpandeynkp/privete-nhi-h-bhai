@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 import asyncio
 
@@ -17,16 +9,16 @@ from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 import config
 from config import BANNED_USERS
 from strings import command
-from YukkiMusic import Platform, app
-from YukkiMusic.misc import db
-from YukkiMusic.utils import Yukkibin, get_channeplayCB, seconds_to_min
-from YukkiMusic.utils.database import (
+from professor import Platform, app
+from professor.misc import db
+from professor.utils import Yukkibin, get_channeplayCB, seconds_to_min
+from professor.utils.database import (
     get_cmode,
     is_active_chat,
     is_music_playing,
 )
-from YukkiMusic.utils.decorators.language import language, languageCB
-from YukkiMusic.utils.inline.queue import queue_back_markup, queue_markup
+from professor.utils.decorators.language import language, languageCB
+from professor.utils.inline.queue import queue_back_markup, queue_markup
 
 basic = {}
 
