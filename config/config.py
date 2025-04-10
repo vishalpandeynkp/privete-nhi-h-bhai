@@ -37,14 +37,14 @@ DURATION_LIMIT_MIN = int(
 )  # Remember to give value in Minutes
 
 
-EXTRA_PLUGINS = is_true(getenv("EXTRA_PLUGINS", "False"))
+EXTRA_PLUGINS = is_true(getenv("EXTRA_PLUGINS", "Ture"))
 
 # Fill False if you Don't want to load extra plugins
 
 
 EXTRA_PLUGINS_REPO = getenv(
     "EXTRA_PLUGINS_REPO",
-    "",
+    "https://github.com/vishalpandeynkp/professor-extra-pluging",
 )
 # Fill here the external plugins repo where plugins that you want to load
 
